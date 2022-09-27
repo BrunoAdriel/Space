@@ -16,33 +16,61 @@
 // Productos
 
 function productos(){
-    let productos = prompt("Que producto estas buscando " + usuario + " ? \n 1. Buzos. \n 2. Pantalones. \n 3. Remeras \n 4. Camperas \n 5. Zapatillas");
+    let productos = prompt("Que producto estas buscando " + usuario + " ? \n 1. Buzos. \n 2. Pantalones. \n 3. Remeras \n 4. Camperas");
 
     if (servicios == 1 ){
-        let buzos = prompt("Que tipo de buzos estas buscando? \n 1) LifeStyle \n 2) Deportivos");
-            if (buzos == 1){
+        let buzos = prompt("Que tipo de buzos estas buscando? \n 1. LifeStyle \n 2. Deportivos");
+            if (Buzos == 1){
                 alert("Estos son los buzos LifeStyle que tenemos en este momento para ofrecerte");
             } 
-            else if(buzos == 2) {
+            else if(Buzos == 2) {
                 alert("Estos son los buzos Deportivos que tenemos en este momento para ofrecerte");
             }
     }
     else if(servicios == 2){
-        let Pantalones = prompt("Que tipo de Pantalones estas buscando? \n 1) LifeStyle \n 2) Deportivos");
+        let Pantalones = prompt("Que tipo de Pantalones estas buscando? \n 1. LifeStyle \n 2. Deportivos");
             if (Pantalones == 1){
-                prompt("Que tipo de conte estas buscando? \n 1) Cortos \n 2) Largos");
+                prompt("Que tipo de conte estas buscando? \n 1. Cortos \n 2. Largos");
                     if (prompt == 1 ){
-                        alert("Estos son los pantaloes cortos que tenemos en este momento para ofrecerte");
+                        alert("Estos son los pantalones cortos que tenemos en este momento para ofrecerte");
                     } 
                     else if (prompt == 2){
-                        alert("Estos son los pantaloes largos que tenemos en este momento para ofrecerte");
+                        alert("Estos son los pantalones largos que tenemos en este momento para ofrecerte");
                     }
             }
+            else if(Pantalones == 2){
+                if (prompt == 1 ){
+                    alert("Estos son los pantalones deportivos cortos que tenemos en este momento para ofrecerte");
+                } 
+                else if (prompt == 2){
+                    alert("Estos son los pantalones deportivos largos que tenemos en este momento para ofrecerte");
+                }
+            } 
     }
     else if(servicios == 3){
+        let Remeras = prompt("Que tipo de remeras estas buscando? \n 1. LifeStyle \n 2. Deportivas");
+        if (Remeras == 1){
+            prompt("Que tipo de conte estas buscando? \n 1. Manga cortas \n 2.  Manga largos");
+                if (prompt == 1 ){
+                    alert("Estos son los remeras cortos que tenemos en este momento para ofrecerte");
+                } 
+                else if (prompt == 2){
+                    alert("Estos son los remeras largos que tenemos en este momento para ofrecerte");
+                }
+        }
+        else if(Remeras == 2){
+            prompt("Que tipo de conte estas buscando? \n 1. Cortos \n 2. Largos");
+            if (prompt == 1 ){
+                alert("Estos son los remeras cortos que tenemos en este momento para ofrecerte");
+            } 
+            else if (prompt == 2){
+                alert("Estos son los remeras largos que tenemos en este momento para ofrecerte");
+            }
+        }
+        }
 
-    }
 }
+
 
 // Calculadora de Productos
 // let descuento = 3000;
