@@ -1,17 +1,17 @@
 // Inicio con usuario guardado
 
-let usuario = prompt("Ingresa tu nombre");
-let contraseña = prompt("Ingresa tu contraseña");
-let userPrincipal = "AdrielBruno";
-let contraseñaPrincipal = "123123";
+// let usuario = prompt("Ingresa tu nombre");
+// let contraseña = prompt("Ingresa tu contraseña");
+// let userPrincipal = "AdrielBruno";
+// let contraseñaPrincipal = "123123";
 
-if (usuario == userPrincipal && contraseña == contraseñaPrincipal ){
-    alert("Bienvenido " + userPrincipal + " " + "espero que estes bien");
-} else if (usuario, contraseña) {
-    alert("Bienvenide " + usuario + " gracias por elegirnos");
-} else {
-    alert("no ingreso ningun usuario ni contraseña, podras navegar sin comprar");
-}
+// if (usuario == userPrincipal && contraseña == contraseñaPrincipal ){
+//     alert("Bienvenido " + userPrincipal + " " + "espero que estes bien");
+// } else if (usuario, contraseña) {
+//     alert("Bienvenide " + usuario + " gracias por elegirnos");
+// } else {
+//     alert("no ingreso ningun usuario ni contraseña, podras navegar sin comprar");
+// }
 
 // Productos
 
@@ -79,7 +79,7 @@ function productos(){
         }
     }
 }
-productos();
+// productos();
 
 // Calculadora de Productos
 let descuento = 3000;
@@ -109,6 +109,38 @@ function calculadora(art1, art2, operador) {
 // console.log(calculo);
 // let calculo1 = calculadora(4000, descuento, "-");
 // console.log(calculo1);
+
 // let calculo2 = calculadora(4000, numero, "*");
 // console.log(calculo2);
 
+// Funciones Constructoras
+
+function Producto(nombre, talle, tipo, color, genero, precio, stock){
+    this.nombre = nombre;
+    this.talle = talle;
+    this.tipo = tipo;
+    this.color = color;
+    this.genero = genero;
+    this.precio = precio;
+    this.stock = stock;
+}
+
+const BuzoArticulo1 = new Producto ("Buzo Icons", "S/M/L/XL", "LifeStyle", "Gris y Rosa", "Unisex", 12000, 7);
+const CamperonArticulo1 = new Producto ("Camperon BTS", "M/L/XL/XXL", "Deportivo", "Azul y Amarillo", "Unisex", 25000, 10);
+const CamperaArticulo1 = new Producto ("Rompeviento Liviano", "XS/S/M/L/XL", "Deportivo", "Negro, Dorado y Blanco", "Mujer", 14000, 4);
+
+
+// Arrays y objetos
+
+const indumentaria = ["Gorras", "Camperas", "Remeras", "Pantalones", "Medias"];
+const carrito = [];
+
+carrito.push(BuzoArticulo1, CamperonArticulo1)
+console.log(carrito);
+
+for (const producto of carrito) {
+    console.log ("Producto: " + producto.nombre );
+    console.log ("Talles: " + producto.talle );
+    console.log ("Tipo: " + producto.tipo );
+    console.log ("Precio: $ " + producto.precio );
+}
