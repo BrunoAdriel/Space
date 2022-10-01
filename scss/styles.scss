@@ -2,15 +2,30 @@ h1{
     color: blue
 }
 
+// Extends
 
-.ImgsCaruosel{
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
+.BgCarrousel{
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(231, 231, 231);
 }
 
-.AjusteCarrusel{
-    width: 100vw;
-    height: 400px;
+// Carrousel
+
+.ImgMain{
+    background-image: url(../pictures/Buzo1.jpg);
+    @extend .BgCarrousel;
+}
+
+.ImgSec{
+    background-image:url(../pictures/CamperaRompevientoMujer1.jpg);
+    @extend .BgCarrousel;
+}
+
+.ImgThird{
+    background-image:url(../pictures/Camperon1.jpg);
+    @extend .BgCarrousel;
 }
 

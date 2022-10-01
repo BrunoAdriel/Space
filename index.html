@@ -11,6 +11,24 @@
 </head>
 <body>
     <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Space</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Indumentaria</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+        </nav>
         <h1>ShowroomNike</h1>
         <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illo ullam nisi molestiae repudiandae atque saepe modi consectetur quis quod consequuntur rerum dolor omnis nobis soluta impedit, quidem animi perspiciatis in adipisci nihil beatae sit quaerat nemo! Animi unde amet debitis beatae nemo iste possimus culpa, fuga ipsum repellat eligendi?</P>
     </header>
@@ -21,13 +39,13 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"> 
             <div class="carousel-inner">
             <div class="carousel-item active AjusteCarrusel">
-                <img src="pictures/Buzo1.jpg" class="d-block w-100" alt="Buzo oversize gris con cuadrados y manga rosa">
+                <img class="d-block w-100 ImgMain" (alt="Buzo oversize gris con cuadrados y manga rosa")>
             </div>
             <div class="carousel-item AjusteCarrusel">
-                <img src="pictures/CamperaRompevientoMujer1.jpg" class="d-block w-100 ImgsCaruosel" alt="Campera rompeviento negra con estampado de tigre">
+                <img class="d-block w-100 ImgSec" (alt="Campera rompeviento negra con estampado de tigre")>
             </div>
             <div class="carousel-item AjusteCarrusel">
-                <img src="pictures/Camperon1.jpg" class="d-block w-100" alt="camperon celeste con mangas amarillas ">
+                <img class="d-block w-100 ImgThird" (alt="camperon celeste con mangas amarillas")>
             </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -36,7 +54,7 @@
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden"></span>
             </button>
         </div>
     </main>

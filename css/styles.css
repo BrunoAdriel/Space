@@ -1,11 +1,18 @@
 h1 {
   color: blue; }
 
-.ImgsCaruosel {
-  background-size: contain;
+.BgCarrousel, .ImgMain, .ImgSec, .ImgThird {
+  height: 400px;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-size: contain;
+  background-color: #e7e7e7; }
 
-.AjusteCarrusel {
-  width: 100vw;
-  height: 400px; }
+.ImgMain {
+  background-image: url(../pictures/Buzo1.jpg); }
+
+.ImgSec {
+  background-image: url(../pictures/CamperaRompevientoMujer1.jpg); }
+
+.ImgThird {
+  background-image: url(../pictures/Camperon1.jpg); }
