@@ -130,6 +130,10 @@ const CamperonArticulo1 = new Producto ("Camperon BTS", "M/L/XL/XXL", "Deportivo
 const CamperaArticulo1 = new Producto ("Rompeviento Liviano", "XS/S/M/L/XL", "Deportivo", "Negro, Dorado y Blanco", "Mujer", 14000, 4);
 
 
+// Agregar nuevos productos
+
+const NuevoProducto = new Producto 
+
 // Arrays y objetos
 
 const indumentaria = ["Gorras", "Camperas", "Remeras", "Pantalones", "Medias"];
