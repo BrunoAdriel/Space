@@ -113,38 +113,67 @@ function calculadora(art1, art2, operador) {
 // let calculo2 = calculadora(4000, numero, "*");
 // console.log(calculo2);
 
-// Funciones Constructoras
 
-function Producto(nombre, talle, tipo, color, genero, precio, stock){
+// ------------- asi creamos un arrays y una function 
+
+const producto =[
+    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"BuzoArticulo1.jpg", stock: 7
+    },
+    { id: 2, nombre:"camperon bts", precio: 25000, color:"Azul y Amarillo", talle:"M/L/XL/XXL", tipo:"Deportivo", genero:"Unisex", img:"Camperon1.jpg", stock: 10
+    },
+    { id: 3, nombre:"campera rompeviento liviano", precio: 14000, color:"Negro, Dorado y Blanco", talle:"XS/S/M/L/XL", tipo:"Deportivo", genero: "mujer", img:"CamperaRompevientoMujer1.jpg", stock:4
+    },
+];
+
+
+function Prods(id, nombre, precio, color, talle, tipo, genero, img, stock){
+    this.id = id;
     this.nombre = nombre;
+    this.precio = precio;
+    this.color = color;
     this.talle = talle;
     this.tipo = tipo;
-    this.color = color;
     this.genero = genero;
-    this.precio = precio;
+    this.img = img;
     this.stock = stock;
 }
 
-const BuzoArticulo1 = new Producto ("Buzo Icons", "S/M/L/XL", "LifeStyle", "Gris y Rosa", "Unisex", 12000, 7);
-const CamperonArticulo1 = new Producto ("Camperon BTS", "M/L/XL/XXL", "Deportivo", "Azul y Amarillo", "Unisex", 25000, 10);
-const CamperaArticulo1 = new Producto ("Rompeviento Liviano", "XS/S/M/L/XL", "Deportivo", "Negro, Dorado y Blanco", "Mujer", 14000, 4);
+// ------------- asi agregamos un nuevo producto  y lo pusheamos al arrays por funciones (es una manera generica, para que cuando quieras agregar mas servicios puedas hacerlo llamando a la funcion)
 
+const NuevoProd = new Prods (4, "campera cuerina", 20000, "negro", "S/M/L", "LifeStyle", "Mujer", "CamperaMujer3.jpg", 10);
 
-// Agregar nuevos productos
-
-const NuevoProducto = new Producto 
-
-// Arrays y objetos
-
-const indumentaria = ["Gorras", "Camperas", "Remeras", "Pantalones", "Medias"];
-const carrito = [];
-
-carrito.push(BuzoArticulo1, CamperonArticulo1)
-console.log(carrito);
-
-for (const producto of carrito) {
-    console.log ("Producto: " + producto.nombre );
-    console.log ("Talles: " + producto.talle );
-    console.log ("Tipo: " + producto.tipo );
-    console.log ("Precio: $ " + producto.precio );
+function CargaProd(arr, objetos){
+    arr.push(objetos);
 }
+
+CargaProd(producto, NuevoProd);
+// console.log(producto);
+
+
+// ------------- Filtrado y busquedas
+
+function filtrar(arr, filtro, param){
+    return arr.filter((el)=>{
+        if(param == 'precio'){
+            return el[param] <= parseFloat(filtro);
+        }else{
+            return el[param].includes(filtro);
+        }
+    }
+    )
+}
+
+// console.log(filtrar(producto, parseFloat(prompt("precio deseado")), 'precio'));
+// console.log(filtrar(producto, prompt("nombre del producto").toLowerCase() ,'nombre'));
+
+// ------------- Carrito
+
+const carrito = [];
+// const ropa =filtrar(producto, parseFloat(prompt("precio deseado")), 'precio')
+
+for (const resultado of ropa) {
+    CargaProd(carrito, resultado);
+    
+}
+// console.log(carrito);
+
