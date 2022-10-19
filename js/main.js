@@ -117,7 +117,7 @@ function calculadora(art1, art2, operador) {
 // ------------- asi creamos un arrays y una function 
 
 const producto =[
-    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"BuzoArticulo1.jpg", stock: 7},
+    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"./pictures/BuzoArticulo1.jpg", stock: 7},
     { id: 2, nombre:"camperon bts", precio: 25000, color:"Azul y Amarillo", talle:"M/L/XL/XXL", tipo:"Deportivo", genero:"Unisex", img:"Camperon1.jpg", stock: 10},
     { id: 3, nombre:"campera rompeviento liviano", precio: 14000, color:"Negro, Dorado y Blanco", talle:"XS/S/M/L/XL", tipo:"Deportivo", genero: "mujer", img:"CamperaRompevientoMujer1.jpg", stock:4},
 ];
@@ -174,20 +174,26 @@ const carrito = [];
 // }
 // console.log(carrito);
 
+
 // ------------- ------------- ------------- insertar productos en html
+
+// const enJSON = JSON.stringify(producto)
+
+// localStorage.setItem("producto", enJSON)
 
 const div = document.getElementById("lista");
 console.log(div);
 
-const enJSON = JSON.stringify(producto)
 
-localStorage.setItem("producto", enJSON)
-
-
-for (const prodd of producto) {
-    let p = document.createElement("p");
-    p.innerHTML = prodd;
-    document.body.append(p);
+for (const div of producto) {
+    let div = document.createElement("div");
+    div.innerHTML = `
+        <div>
+            <img src="${producto.img}" alt=""/>
+            <h5> ${producto.nombre}</h5> 
+            <p> ${producto.precio}</p>
+        </div>`;
+    document.body.append(div);
     // div.appendChild(p)
 }
 
