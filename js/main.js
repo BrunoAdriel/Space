@@ -117,16 +117,13 @@ function calculadora(art1, art2, operador) {
 // ------------- asi creamos un arrays y una function 
 
 const producto =[
-    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"BuzoArticulo1.jpg", stock: 7
-    },
-    { id: 2, nombre:"camperon bts", precio: 25000, color:"Azul y Amarillo", talle:"M/L/XL/XXL", tipo:"Deportivo", genero:"Unisex", img:"Camperon1.jpg", stock: 10
-    },
-    { id: 3, nombre:"campera rompeviento liviano", precio: 14000, color:"Negro, Dorado y Blanco", talle:"XS/S/M/L/XL", tipo:"Deportivo", genero: "mujer", img:"CamperaRompevientoMujer1.jpg", stock:4
-    },
+    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"BuzoArticulo1.jpg", stock: 7},
+    { id: 2, nombre:"camperon bts", precio: 25000, color:"Azul y Amarillo", talle:"M/L/XL/XXL", tipo:"Deportivo", genero:"Unisex", img:"Camperon1.jpg", stock: 10},
+    { id: 3, nombre:"campera rompeviento liviano", precio: 14000, color:"Negro, Dorado y Blanco", talle:"XS/S/M/L/XL", tipo:"Deportivo", genero: "mujer", img:"CamperaRompevientoMujer1.jpg", stock:4},
 ];
 
 
-function Prods(id, nombre, precio, color, talle, tipo, genero, img, stock){
+function prods(id, nombre, precio, color, talle, tipo, genero, img, stock){
     this.id = id;
     this.nombre = nombre;
     this.precio = precio;
@@ -140,7 +137,7 @@ function Prods(id, nombre, precio, color, talle, tipo, genero, img, stock){
 
 // ------------- asi agregamos un nuevo producto  y lo pusheamos al arrays por funciones (es una manera generica, para que cuando quieras agregar mas servicios puedas hacerlo llamando a la funcion)
 
-const NuevoProd = new Prods (4, "campera cuerina", 20000, "negro", "S/M/L", "LifeStyle", "Mujer", "CamperaMujer3.jpg", 10);
+const NuevoProd = new prods (4, "campera cuerina", 20000, "negro", "S/M/L", "LifeStyle", "Mujer", "CamperaMujer3.jpg", 10);
 
 function CargaProd(arr, objetos){
     arr.push(objetos);
@@ -171,9 +168,45 @@ function filtrar(arr, filtro, param){
 const carrito = [];
 // const ropa =filtrar(producto, parseFloat(prompt("precio deseado")), 'precio')
 
-for (const resultado of ropa) {
-    CargaProd(carrito, resultado);
+// for (const resultado of ropa) {
+//     CargaProd(carrito, resultado);
     
-}
+// }
 // console.log(carrito);
+
+// ------------- ------------- ------------- insertar productos en html
+
+const div = document.getElementById("lista");
+console.log(div);
+
+const enJSON = JSON.stringify(producto)
+
+localStorage.setItem("producto", enJSON)
+
+
+for (const prodd of producto) {
+    let p = document.createElement("p");
+    p.innerHTML = prodd;
+    document.body.append(p);
+    // div.appendChild(p)
+}
+
+
+
+
+// let div = document.getElementById("lista")
+
+// producto.forEach((productos) => {
+//     let p =document.createElement("p");
+//     p.innerHTML = productos;
+//     div.appendChild(p);
+// });
+
+
+
+// const catalogo = document.getElementsByClassName("lista")
+// catalogo.innerHTML=`
+//     <img src="./pictures/${producto.img}" alt="">
+//     <p> ${producto.nombre}, $ ${producto.precio}</p>
+// `;
 
