@@ -1,3 +1,5 @@
+const tbody = document.querySelector("#lista")
+
 // Inicio con usuario guardado
 
 // let usuario = prompt("Ingresa tu nombre");
@@ -117,7 +119,7 @@ function calculadora(art1, art2, operador) {
 // ------------- asi creamos un arrays y una function 
 
 const producto =[
-    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"./pictures/BuzoArticulo1.jpg", stock: 7},
+    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"BuzoArticulo1.jpg", stock: 7},
     { id: 2, nombre:"camperon bts", precio: 25000, color:"Azul y Amarillo", talle:"M/L/XL/XXL", tipo:"Deportivo", genero:"Unisex", img:"Camperon1.jpg", stock: 10},
     { id: 3, nombre:"campera rompeviento liviano", precio: 14000, color:"Negro, Dorado y Blanco", talle:"XS/S/M/L/XL", tipo:"Deportivo", genero: "mujer", img:"CamperaRompevientoMujer1.jpg", stock:4},
 ];
@@ -177,42 +179,49 @@ const carrito = [];
 
 // ------------- ------------- ------------- insertar productos en html
 
-// const enJSON = JSON.stringify(producto)
 
-// localStorage.setItem("producto", enJSON)
+// let div = document.getElementById("pd")
 
-const div = document.getElementById("lista");
-console.log(div);
-
-
-for (const div of producto) {
-    let div = document.createElement("div");
-    div.innerHTML = `
-        <div>
-            <img src="${producto.img}" alt=""/>
-            <h5> ${producto.nombre}</h5> 
-            <p> ${producto.precio}</p>
-        </div>`;
-    document.body.append(div);
-    // div.appendChild(p)
-}
-
-
-
-
-// let div = document.getElementById("lista")
-
-// producto.forEach((productos) => {
-//     let p =document.createElement("p");
-//     p.innerHTML = productos;
-//     div.appendChild(p);
+// producto.forEach((producto) => {
+//     let p =document.createElement("div");
+//     div.innerHTML = `
+//             <div>
+//                 <img src="./pictures/${producto.img}" alt=""/ class="card-img-top">
+//                 <h5> ${producto.nombre}</h5> 
+//                 <p class="card-text"> ${producto.precio}</p>
+//             </div>`;
 // });
 
+// function cargarInventario(arr, productos){
+//     return arr.push(productos)
+// }
+// ------------- ------------- -------------
 
+let div = document.getElementById("pd")
 
-// const catalogo = document.getElementsByClassName("lista")
-// catalogo.innerHTML=`
-//     <img src="./pictures/${producto.img}" alt="">
-//     <p> ${producto.nombre}, $ ${producto.precio}</p>
-// `;
+function cargarInventario(arr, prods){
+    return arr.push(prods);
+}
 
+function crearHtml(arr){
+    div.innerHTML = ""
+
+        let html = "";
+        for (const producto of arr) {
+            html = `
+            <div>
+            <img src="./pictures/${producto.img}" alt=""/ class="card-img-top">
+            <h5> ${producto.nombre}</h5> 
+            <p class="card-text"> ${producto.precio}</p>
+        </div>`;
+    
+    div.innerHTML += html;
+
+}
+}
+
+cargarInventario(producto);
+crearHtml(producto);
+
+// cargarInventario(tbod);
+// 0:36::54
