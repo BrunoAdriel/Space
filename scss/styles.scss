@@ -1,6 +1,4 @@
-h1{
-    color: blue
-}
+
 
 // Extends
 
@@ -29,3 +27,24 @@ h1{
     @extend .BgCarrousel;
 }
 
+//  boton
+
+.bt{
+    width: 100px;
+    height: 40px;
+    background-color:rgba(53, 53, 53, 0.849);
+    border: none;
+    border-radius: 40%;
+
+}
+.bt:hover{background-color:#C8C8C8;
+    transition: 1.5s;
+}
+
+
+// .busqueda{
+//     width:350px;
+//     display: flex;
+//     justify-content: flex-end;
+// }:    width: 90px;
+    // height: 37px;
