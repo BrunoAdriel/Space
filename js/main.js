@@ -1,85 +1,5 @@
 // Inicio con usuario guardado
 
-// let usuario = prompt("Ingresa tu nombre");
-// let contraseña = prompt("Ingresa tu contraseña");
-// let userPrincipal = "AdrielBruno";
-// let contraseñaPrincipal = "123123";
-
-// if (usuario == userPrincipal && contraseña == contraseñaPrincipal ){
-//     alert("Bienvenido " + userPrincipal + " " + "espero que estes bien");
-// } else if (usuario, contraseña) {
-//     alert("Bienvenide " + usuario + " gracias por elegirnos");
-// } else {
-//     alert("no ingreso ningun usuario ni contraseña, podras navegar sin comprar");
-// }
-
-// Productos
-
-function productos(){
-    let productos = prompt("Que producto estas buscando " + usuario + " ? \n 1. Buzos. \n 2. Pantalones. \n 3. Remeras \n 4. Camperas");
-
-    if (productos == 1 ){
-        let buzos = prompt("Que tipo de buzos estas buscando? \n 1. LifeStyle \n 2. Deportivos");
-            if (buzos == 1){
-                alert("Estos son los buzos LifeStyle que tenemos en este momento para ofrecerte");
-            } 
-            else if(buzos == 2) {
-                alert("Estos son los buzos Deportivos que tenemos en este momento para ofrecerte");
-            }
-    }
-    if(productos == 2){
-        let pantalones = prompt("Que tipo de Pantalones estas buscando? \n 1. LifeStyle \n 2. Deportivos");
-            if (pantalones == 1){
-                let lifestyle = prompt("Que tipo de conte estas buscando? \n 1. Cortos \n 2. Largos");
-                    if ( lifestyle == 1 ){
-                        alert("Estos son los pantalones cortos que tenemos en este momento para ofrecerte");
-                    } 
-                    else if ( lifestyle == 2){
-                        alert("Estos son los pantalones largos que tenemos en este momento para ofrecerte");
-                    }
-            }
-            else if(pantalones == 2){
-                let deportivos = prompt("Que tipo de conte estas buscando? \n 1. Cortos \n 2. Largos");
-                if (deportivos == 1 ){
-                    alert("Estos son los pantalones deportivos cortos que tenemos en este momento para ofrecerte");
-                } 
-                else if (deportivos == 2){
-                    alert("Estos son los pantalones deportivos largos que tenemos en este momento para ofrecerte");
-                }
-            } 
-    }
-    if(productos == 3){
-        let Remeras = prompt("Que tipo de remeras estas buscando? \n 1. LifeStyle \n 2. Deportivas");
-            if (Remeras == 1){
-                let lifestyle =prompt("Que tipo de conte estas buscando? \n 1. Manga cortas \n 2.  Manga largos");
-                    if (lifestyle == 1 ){
-                        alert("Estos son las remeras manga corta que tenemos en este momento para ofrecerte");
-                    } 
-                    else if (lifestyle == 2){
-                        alert("Estos son las remeras manga larga que tenemos en este momento para ofrecerte");
-                    }
-            }
-            else if(Remeras == 2){
-                let deportivos = prompt("Que tipo de conte estas buscando? \n 1. Cortos \n 2. Largos");
-                    if (deportivos == 1 ){
-                        alert("Estos son las remeras manga cortas que tenemos en este momento para ofrecerte");
-                    } 
-                    else if (deportivos == 2){
-                        alert("Estos son las remeras manga larga que tenemos en este momento para ofrecerte");
-                    }
-            }
-        }
-    if (productos == 4){
-        let camperas = prompt("Que tipo de campera estas buscando=? \n 1. Camperas \n 2. Camperones");
-        if (camperas == 1){
-            alert("Estos son las tipos de camperas que tenemos disponibles en este momento");
-        }
-        else if( camperas == 2){
-            alert("Estos son los tipos de camperones que tenemos disponibles en este momento");
-        }
-    }
-}
-// productos();
 
 // Calculadora de Productos
 let descuento = 3000;
@@ -117,7 +37,7 @@ function calculadora(art1, art2, operador) {
 // ------------- asi creamos un arrays y una function 
 
 const producto =[
-    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"BuzoArticulo1.jpg", stock: 7},
+    { id: 1, nombre:"buzo icons", precio: 12000, color:"Gris y Rosa", talle:"S/M/L/XL", tipo:"LifeStyle", genero:"Unisex", img:"Buzo1.jpg", stock: 7},
     { id: 2, nombre:"camperon bts", precio: 25000, color:"Azul y Amarillo", talle:"M/L/XL/XXL", tipo:"Deportivo", genero:"Unisex", img:"Camperon1.jpg", stock: 10},
     { id: 3, nombre:"campera rompeviento liviano", precio: 14000, color:"Negro, Dorado y Blanco", talle:"XS/S/M/L/XL", tipo:"Deportivo", genero: "mujer", img:"CamperaRompevientoMujer1.jpg", stock:4},
 ];
@@ -165,7 +85,7 @@ function filtrar(arr, filtro, param){
 
 // ------------- Carrito
 
-const carrito = [];
+
 // const ropa =filtrar(producto, parseFloat(prompt("precio deseado")), 'precio')
 
 // for (const resultado of ropa) {
@@ -178,44 +98,29 @@ const carrito = [];
 // ------------- ------------- ------------- insertar productos en html
 
 
-// let div = document.getElementById("pd")
+const conteinP = document.getElementById("pd")
+let carrito = [];
 
-// producto.forEach((producto) => {
-//     let p =document.createElement("div");
-//     div.innerHTML = `
-//             <div>
-//                 <img src="./pictures/${producto.img}" alt=""/ class="card-img-top">
-//                 <h5> ${producto.nombre}</h5> 
-//                 <p class="card-text"> ${producto.precio}</p>
-//             </div>`;
-// });
-
-// function cargarInventario(arr, productos){
-//     return arr.push(productos)
-// }
-// ------------- ------------- -------------
-
-let div = document.getElementById("pd")
-
-function cargarInventario(arr, prods){
-    return arr.push(prods);
-}
-
-function crearHtml(arr){
-    div.innerHTML = ""
-        let html = "";
-        for (const producto of arr) {
-            html = `
-            <div>
+producto.forEach((producto) =>{
+    const div = document.createElement("div")
+    div.innerHTML =`
             <img src="./pictures/${producto.img}" alt=""/ class="card-img-top">
             <h5> ${producto.nombre}</h5> 
             <p class="card-text"> ${producto.precio}</p>
-        </div>`;
-    
-    div.innerHTML += html;
+            <button id="agregar${producto.id}" class="btnCompra">Agregar</button>`;
 
-}
-}
+    conteinP.appendChild(div)
 
-cargarInventario(producto);
-crearHtml(producto);
+    const buton = document.getElementById("agregar${producto.id}")
+
+    buton.addEventListener("click", () =>{
+        agregarCarrito(producto.id)
+    })
+})
+
+
+const agregarCarrito = (prodId) =>{
+    const item = producto.find((prod) => prod.id === prodId )
+    carrito.push(item)
+    .console.log(carrito);
+}

@@ -34,3 +34,20 @@ btnI.addEventListener("click", (e) =>{
     e.preventDefault();
         inicioSesion(usuarioLS)
     });
+
+
+// check.addEventListener("checked",() => {
+//     if(check.checked){
+        
+//     }else{localStorage.removeItem("usuarios");
+//             localStorage.clear()}
+// })
+
+
+// if (localStorage.usuarios && localStorage.usuarios !== "") {
+//     check.setAttribute("checked", "checked");
+//     email.value = localStorage.usuarios;
+// } else {
+//     check.removeAttribute("checked");
+//     email.value = "";
+// }
