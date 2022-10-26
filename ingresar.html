@@ -9,30 +9,30 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css"> 
     <title>Document</title>
 </head>
-<body>
-    <div class="card text-center">
+<body class="bodyingresar">
+    <div class="ingresar">
         <h1>Ingresar</h1>
         <form>
-            <div class="card-body ">
-                <input type="email" class="" id="email" required>
-                <label for="email" class="">Email</label>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email floatingInput" placeholder="name@example.com" required>
+                <label for="email floatingInput">Email</label>
             </div>
-            <div class="card-body ">
-                <input type="password" class="" id="pass" required>
-                <label for="pass" class="">Contraseña</label>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="pass floatingInput" placeholder="Password" required>
+                <label for="pass floatingInput">Constraseña</label>
             </div>
         </form>
-        <div class="card-body ">
+        <div >
             <input type="checkbox"  id="check" />
             <label  for="check">Recordarme</label>
         </div>
-        <div class="card-body ">
+        <div >
             <input class="bt" type="submit" id="btnI" value="Ingresar">
         </div>
         <div>
             <span id="msj"></span>
         </div>
-        <div class="card-body ">
+        <div >
             <p>¿No tenes usuario? <a href="registro.html">Registrate</a></p>
         </div>
     </div>

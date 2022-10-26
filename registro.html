@@ -9,30 +9,30 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css"> 
     <title>Document</title>
 </head>
-<body>
-    <div class="card text-center" style="width: 24rem;">
-        <div class="card-body">
-        <h1 class="card-title">Ingresar</h1>
+<body class="bodyregistro">
+    <div class="ingresarRegisto" style="width: 24rem;">
+        <div class="">
+        <h1>Ingresar</h1>
         <form>
-            <div class="card-body ">
-                <input type="text"  id="nombre" required>
-                <label for="nombre">Nombre</label>
+            <div class="form-floating mb-3">
+                <input type="text"  id="nombre " class="form-control" placeholder="name" required>
+                <label for="nombre floatingInput">Nombre</label>
             </div>
-            <div class="card-body ">
-                <input type="text" id="apellido" required>
-                <label for="apellido">Apellido</label>
+            <div class="form-floating mb-3">
+                <input type="text" id="apellido" class="form-control" placeholder="surname"required>
+                <label for="apellido floatingInput">Apellido</label>
             </div>
-            <div class="card-body ">
-                <input type="text" id="email" required>
-                <label for="email">Email</label>
+            <div class="form-floating mb-3">
+                <input type="text" id="email" class="form-control" placeholder="name@example.com" required>
+                <label for="email floatingInput">Email</label>
             </div>
-            <div class="card-body ">
-                <input type="password" class="" id="pass" required>
-                <label for="pass" class="card-text">Contraseña</label>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="pass" class="form-control" placeholder="password" required>
+                <label for="pass floatingInput" >Contraseña</label>
             </div>
         </form>
-        <div class="card-body ">
-            <input class="bt" type="submit" id="BtnR" value="Registrate">
+        <div class="pdingtbnR">
+            <input class="bt " type="submit" id="BtnR" value="Registrate">
         </div>
         <span>¿Ya te registraste?<a href="ingresar.html">Ingresar</a></span>
         </div>

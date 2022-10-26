@@ -104,23 +104,44 @@ let carrito = [];
 producto.forEach((producto) =>{
     const div = document.createElement("div")
     div.innerHTML =`
-            <img src="./pictures/${producto.img}" alt=""/ class="card-img-top">
-            <h5> ${producto.nombre}</h5> 
-            <p class="card-text"> ${producto.precio}</p>
-            <button id="agregar${producto.id}" class="btnCompra">Agregar</button>`;
-
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="./pictures/${producto.img}" alt=""/ class="card-img-top">
+                <div class="card-body">
+                <h5 class="card-title"> ${producto.nombre}</h5> 
+                <p class="card-text"> ${producto.precio}</p>
+                <button id="agregar${producto.id}" class="btnCompra" >Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>`;
     conteinP.appendChild(div)
+    
+
+    
+    // const buton = document.getElementById("agregar${producto.id}").onclick=botonclick;
+
+    // function botonclick()){
+
+    // }
+    // buton.addEventListener("click", () =>{
+    //     agregarCarrito(producto.id)
+    // })
+
 
     const buton = document.getElementById("agregar${producto.id}")
 
-    buton.addEventListener("click", () =>{
+    window.onload=function(){ 
+        addEventListener("click", buton =>{
         agregarCarrito(producto.id)
-    })
+        })
+    }
 })
 
 
 const agregarCarrito = (prodId) =>{
     const item = producto.find((prod) => prod.id === prodId )
     carrito.push(item)
-    .console.log(carrito);
+    console.log(carrito);
 }
