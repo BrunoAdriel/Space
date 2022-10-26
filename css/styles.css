@@ -1,5 +1,5 @@
 a {
-  color: black;
+  color: #dadada;
   text-decoration: none; }
 
 .BgCarrousel, .ImgMain, .ImgSec, .ImgThird {
@@ -20,7 +20,9 @@ a {
 
 .iconIngres {
   width: 60px;
-  background-color: transparent; }
+  background-color: white;
+  filter: brightness(1.1);
+  mix-blend-mode: multiply; }
 
 .bt {
   width: 100px;

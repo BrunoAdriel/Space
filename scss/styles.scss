@@ -1,7 +1,7 @@
 // 
 
 a{
-    color: black;
+    color: rgb(218, 218, 218);
     text-decoration: none;
 }
 
@@ -36,7 +36,9 @@ a{
 //  boton
 .iconIngres{
     width: 60px;
-    background-color: transparent;
+    background-color: white;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
 }
 
 
