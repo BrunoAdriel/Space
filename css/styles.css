@@ -81,3 +81,8 @@ a {
 .pdingtbnR {
   z-index: 3;
   padding-left: 70px; }
+
+.inventarioArr {
+  display: flex;
+  justify-content: space-around;
+  height: 500px; }
