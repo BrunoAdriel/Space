@@ -131,4 +131,45 @@ const agregarCarrito = (prodId) =>{
     carrito.push(item)
     console.log(carrito);
 }
-// ------------- ------------- -------------// ------------- ------------- -------------
+
+
+// ------------- ------------- ------------- actualizar el carrito ------------- ------------- -------------
+
+
+const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
+const botonAbrir = document.getElementById('boton-carrito')
+const botonCerrar = document.getElementById('carritoCerrar')
+const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
+
+
+botonAbrir.addEventListener('click', ()=>{
+    contenedorModal.classList.toggle('modal-active')
+})
+botonCerrar.addEventListener('click', ()=>{
+    contenedorModal.classList.toggle('modal-active')
+})
+
+contenedorModal.addEventListener('click', (event) =>{
+    contenedorModal.classList.toggle('modal-active')
+
+})
+modalCarrito.addEventListener('click', (event) => {
+    event.stopPropagation() //cuando clickeo sobre el modal se finaliza la propagacion del click a los elementos
+    //padre
+})
+
+
+// ------------- ------------- ------------- actualizar el carrito ------------- ------------- -------------
+
+const contenedorCarrito = document.getElementById('carritoContenedor')
+
+// const actualizarCarrito = () => {
+    
+
+//     carrito.forEach((prod) => {
+//         const div = document.getElementById('div')
+//         div.className  = ('productoEnCarrito')
+//         div.innerHTML =   `
+
+//     })
+// }
